@@ -33,7 +33,7 @@ $ npm run serve
 ... 
 
 ```
-* Note : validate the default Page Vue 
+Note : validate the default Page Vue 
 
 ### 3-  Building Project 
 
