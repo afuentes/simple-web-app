@@ -26,14 +26,14 @@ $ vue --version
 ```
 $ vue create simple-web-app # choose default values 
 $ cd simple-web-app
-$ npm run serve
-... 
+$ npm run serve # validate vue page is running 
+
   App running at:
   - Local:   http://localhost:8080/ 
-... 
+$  
 
 ```
-Note : validate the default Page Vue 
+
 
 ### 3-  Building Project 
 
