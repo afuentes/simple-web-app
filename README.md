@@ -1,6 +1,6 @@
 # simple-web-app
 
-Vue.js + 
+Vue.js + Tailwind CSS + NGINX + Docker 
 
 ### 1- Enviroment Prerequisites 
 
