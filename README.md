@@ -1,5 +1,7 @@
 # simple-web-app
 
+Vue.js +
+
 ## Project setup
 ```
 npm install
