@@ -21,7 +21,7 @@ $ vue --version
 3.5.1
 
 ```
-### 1- Project Create  
+### 1- Project Vue Create  
 
 ```
 $ vue create simple-web-app # choose default values 
@@ -31,9 +31,10 @@ $ npm run serve
   App running at:
   - Local:   http://localhost:8080/ 
 ... 
-* Note : validate the default Page Vue 
 
 ```
+* Note : validate the default Page Vue 
+
 
 ## Project setup
 ```
