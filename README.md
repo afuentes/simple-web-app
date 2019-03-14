@@ -21,6 +21,7 @@ $ vue --version
 3.5.1
 
 ```
+
 ### 2- Project Vue Create  
 
 ```
@@ -33,7 +34,6 @@ $ npm run serve # validate vue page is running
 $  
 
 ```
-
 
 ### 3-  Building Project 
 
