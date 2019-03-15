@@ -28,20 +28,35 @@ $ vue --version
 $ vue create simple-web-app # choose default values 
 $ cd simple-web-app
 $ npm run serve # validate vue page is running 
-
+ 
   App running at:
   - Local:   http://localhost:8080/ 
-$  
+$ npm install tailwindcss --save-dev
+$ npx tailwind init tailwind.js
+```
+* Note : copy this into App.vue 
+
+```
+<style>
+
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
 
 ```
 
-### 3-  Building Project 
+
+### 3-  Building Project + Tailwind CSS 
 
 ```
 $ git clone https://github.com/afuentes/simple-web-app.git
 $ cd simple-web-app
 $ npm install
+$ npm install tailwindcss --save-dev 
+$ npx tailwind init tailwind.js
 $ npm run server # validate vue page is running 
+
+
 
 ```
 
