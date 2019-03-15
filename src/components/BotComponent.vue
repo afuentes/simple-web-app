@@ -20,7 +20,7 @@
             </div>
   </nav>
   <!-- Chat messages -->  
-   <div class="px-6 py-4 flex-1 overflow-y-scroll" >
+   <div class="px-6 py-4 flex-1 overflow-y-scroll"  style="background-color: #DAD3CC" >
 
       <div class="flex mb-2">
        <div class="rounded py-2 px-3" style="background-color: #F2F2F2">
