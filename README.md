@@ -21,46 +21,32 @@ $ vue --version
 3.5.1
 
 ```
-### 1- Project Vue Create  
+
+### 2- Project Vue Create  
 
 ```
 $ vue create simple-web-app # choose default values 
 $ cd simple-web-app
-$ npm run serve
-... 
+$ npm run serve # validate vue page is running 
+
   App running at:
   - Local:   http://localhost:8080/ 
-... 
+$  
 
 ```
-* Note : validate the default Page Vue 
+
+### 3-  Building Project 
+
+```
+$ git clone https://github.com/afuentes/simple-web-app.git
+$ cd simple-web-app
+$ npm install
+$ npm run server # validate vue page is running 
+
+```
 
 
-## Project setup
-```
-npm install
-```
+### Reference
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
