@@ -44,24 +44,16 @@ $ npx tailwind init tailwind.js
 @tailwind utilities;
 
 ```
-
-
 ### 3-  Building Project + Tailwind CSS 
 
 ```
 $ git clone https://github.com/afuentes/simple-web-app.git
 $ cd simple-web-app
 $ npm install
-$ npm install tailwindcss --save-dev 
-$ npx tailwind init tailwind.js
 $ npm run server # validate vue page is running 
-
-
-
 ```
-
 
 ### Reference
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
+See [Tailwind CSS Site](https://tailwindcss.com/).
