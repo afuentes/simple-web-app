@@ -34,9 +34,9 @@ $ npm run serve # validate vue page is running
 $ npm install tailwindcss --save-dev
 $ npx tailwind init tailwind.js
 ```
-* Note : copy this into App.vue 
+* Note : add this lines in App.vue 
 
-```
+```html
 <style>
 
 @tailwind preflight;
