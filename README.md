@@ -36,7 +36,7 @@ $ npx tailwind init tailwind.js
 ```
 * Note : add this lines in App.vue 
 
-```html
+```css
 <style>
 
 @tailwind preflight;
