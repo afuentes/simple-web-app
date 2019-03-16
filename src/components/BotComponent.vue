@@ -10,8 +10,7 @@
      <!-- Search *TODO -->
   </nav>
   <!-- Chat messages -->  
-   <div class="px-6 py-4 flex-1 overflow-y-scroll" >
-
+   <div class="px-10 py-5 flex-1 overflow-y-auto h-128">
       <div class="flex mb-2">
        <div class="rounded py-2 px-3 bg-grey-light" >
          <p class="text-sm mt-1">
@@ -36,6 +35,70 @@
           </div>
       </div>
 
+       <div class="flex mb-2">
+       <div class="rounded py-2 px-3 bg-grey-light" >
+         <p class="text-sm mt-1">
+          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
+          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
+          sadfasdfasdasdf
+         </p>
+        <p class="text-right text-xs text-grey-dark mt-1">
+         12:45 pm
+        </p>
+        </div>
+      </div>
+
+       <div class="flex mb-2">
+       <div class="rounded py-2 px-3 bg-grey-light" >
+         <p class="text-sm mt-1">
+          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
+          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
+          sadfasdfasdasdf
+         </p>
+        <p class="text-right text-xs text-grey-dark mt-1">
+         12:45 pm
+        </p>
+        </div>
+      </div>
+
+       <div class="flex mb-2">
+       <div class="rounded py-2 px-3 bg-grey-light" >
+         <p class="text-sm mt-1">
+          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
+          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
+          sadfasdfasdasdf
+         </p>
+        <p class="text-right text-xs text-grey-dark mt-1">
+         12:45 pm
+        </p>
+        </div>
+      </div>
+
+       <div class="flex mb-2">
+       <div class="rounded py-2 px-3 bg-grey-light" >
+         <p class="text-sm mt-1">
+          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
+          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
+          sadfasdfasdasdf
+         </p>
+        <p class="text-right text-xs text-grey-dark mt-1">
+         12:45 pm
+        </p>
+        </div>
+      </div>
+
+       <div class="flex mb-2">
+       <div class="rounded py-2 px-3 bg-grey-light" >
+         <p class="text-sm mt-1">
+          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
+          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
+          sadfasdfasdasdf
+         </p>
+        <p class="text-right text-xs text-grey-dark mt-1">
+         12:45 pm
+        </p>
+        </div>
+      </div>
 
    </div> 
   <!-- input Message  -->
