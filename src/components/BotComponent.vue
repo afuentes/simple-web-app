@@ -2,13 +2,13 @@
 <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
   
   <!-- Header  -->
-  <nav class="flex items-center justify-between flex-wrap bg-grey-light p-4">
+  <header class="flex items-center justify-between flex-wrap bg-grey-light p-4">
     <!-- Title -->
   <div class="flex items-center flex-no-shrink text-white mr-6">
     <span class="font-semibold mr-2 text-left flex-auto">Web Bot App</span>
   </div>
      <!-- Search *TODO -->
-  </nav>
+  </header>
   <!-- Chat messages -->  
    <div class="px-10 py-5 flex-1 overflow-y-auto h-128">
       <div class="flex mb-2">
@@ -102,14 +102,14 @@
 
    </div> 
   <!-- input Message  -->
-  <div class="flex rounded-lg border-2 border-grey overflow-hidden">
+  <footer class="flex rounded-lg border-2 border-grey overflow-hidden">
                 <input type="text" class="w-full px-4" placeholder="Message #here" />
                 <button v-on:click="hola" >
                 <span class="text-3xl text-grey border-l-2 border-grey p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </span>
                  </button>
-  </div>
+  </footer>
 
   </div>
 
