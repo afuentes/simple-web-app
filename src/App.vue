@@ -1,16 +1,19 @@
 <template>
-  <div id="app" class="justify-start sm:justify-center md:justify-end lg:justify-between xl:justify-around ">
-    <BotComponent msg="Welcome to Your Simple App"/>
+ <div class="fixed pin flex items-center">
+        
+  <div id="app" class="fixed pin bg-grey-lightest opacity-75 z-10" >
+    <BotController msg="Welcome to Your Simple App"/>
   </div>
+ </div>
 </template>
 
 <script>
-import BotComponent from './components/BotComponent.vue'
+import BotController from './components/BotController.vue'
 
 export default {
   name: 'app',
   components: {
-    BotComponent
+    BotController
   }
 }
 </script>

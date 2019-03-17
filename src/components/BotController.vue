@@ -5,7 +5,7 @@
   <header class="flex items-center justify-between flex-wrap bg-grey-light p-4">
     <!-- Title -->
   <div class="flex items-center flex-no-shrink text-white mr-6">
-    <span class="font-semibold mr-2 text-left flex-auto">Web Bot App</span>
+    <span class="font-semibold mr-2 text-left flex-auto">WebBot App</span>
   </div>
      <!-- Search *TODO -->
   </header>
@@ -117,7 +117,7 @@
 
 <script>
 export default {
-  name: 'BotComponent',
+  name: 'BotController',
   props: {
     msg: String
   }
