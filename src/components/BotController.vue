@@ -10,7 +10,7 @@
      <!-- Search *TODO -->
   </header>
   <!-- Chat messages -->  
-     <DialogController/>
+     <Dialog/>>
   <!-- input Message  -->
   <footer class="flex rounded-lg border-2 border-grey overflow-hidden">
                 <input type="text" class="w-full px-4" placeholder="Message #here" />
@@ -26,20 +26,15 @@
 </template>
 
 <script>
-import DialogController from './components/DialogController.vue'
+import Dialog from './components/Dialog.vue'
 
 export default {
   name: 'BotController',
   components: {
-    DialogController
+    Dialog
   },
   props: {
     msg: String
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
