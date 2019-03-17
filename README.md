@@ -31,6 +31,7 @@ $ npm run serve # validate vue page is running
  
   App running at:
   - Local:   http://localhost:8080/ 
+$ npm install vuex --save  
 $ npm install tailwindcss --save-dev
 $ npx tailwind init tailwind.js
 ```
