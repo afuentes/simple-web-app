@@ -2,6 +2,7 @@ import Vue from 'vue'
 import WebBot from './WebBot.vue'
 import store from './store'
 
+
 Vue.config.productionTip = false
 
 new Vue({

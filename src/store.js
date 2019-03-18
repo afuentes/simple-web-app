@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import moment from 'moment'
 
 Vue.use(Vuex)
 
@@ -16,6 +17,7 @@ export default new Vuex.Store({
         var newMsg = {
             txt: 'test',
             type: 'bot',
+            createdAt : moment().format('h:mm a'), // Now
             isloading : true
         }
         state.total++;

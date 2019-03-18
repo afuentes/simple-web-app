@@ -5,6 +5,9 @@
             <div  :class="msg.type" >
                 <div class="rounded py-2 px-3 bg-grey-lighter" >
                   <p class="text-sm mt-1">{{ msg.txt }} </p>
+                <p class="text-right text-xs text-grey-dark mt-1">
+                  {{ msg.createdAt }}
+                </p>
                  </div>
             </div>
         </div>  <!-- end v-for -->
@@ -26,7 +29,6 @@ export default {
     }
   },
   computed: mapState(['msgs']),
-
 }
 </script>
 

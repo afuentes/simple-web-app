@@ -33,6 +33,7 @@ $ npm run serve # validate vue page is running
   - Local:   http://localhost:8080/ 
 $ npm install vuex --save  
 $ npm install tailwindcss --save-dev
+$ npm install moment --save
 $ npx tailwind init tailwind.js
 ```
 * Note : add this lines in App.vue 
