@@ -34,7 +34,18 @@ export default {
     Dialog
   },
   props: {
-    msg: String
-  }
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+    // create TimerBotControl to Control Bot Interaction
+     this.timer = setInterval(() => {
+                 this.timerBot();
+                 }, 1000);
+     })
+  },
+  methods: {
+  timerBot: function() {}
+  } // end methods
 }
 </script>
+

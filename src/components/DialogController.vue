@@ -1,107 +1,44 @@
 <template>
-  <div>
-       <div class="px-10 py-5 flex-1 overflow-y-auto h-128">
-      <div class="flex mb-2">
-       <div class="rounded py-2 px-3 bg-grey-light" >
-         <p class="text-sm mt-1">
-          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
-          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
-          sadfasdfasdasdf
-         </p>
-        <p class="text-right text-xs text-grey-dark mt-1">
-         12:45 pm
-        </p>
-        </div>
-      </div>
-
-      <div class="flex justify-end mb-2">
-        <div class="rounded py-2 px-3 bg-grey-lighter" >
-          <p class="text-sm mt-1">
-            Festival 
-          </p>
-          <p class="text-right text-xs text-grey-dark mt-1">
-          12:45 pm
-          </p>
-          </div>
-      </div>
-
-       <div class="flex mb-2">
-       <div class="rounded py-2 px-3 bg-grey-light" >
-         <p class="text-sm mt-1">
-          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
-          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
-          sadfasdfasdasdf
-         </p>
-        <p class="text-right text-xs text-grey-dark mt-1">
-         12:45 pm
-        </p>
-        </div>
-      </div>
-
-       <div class="flex mb-2">
-       <div class="rounded py-2 px-3 bg-grey-light" >
-         <p class="text-sm mt-1">
-          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
-          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
-          sadfasdfasdasdf
-         </p>
-        <p class="text-right text-xs text-grey-dark mt-1">
-         12:45 pm
-        </p>
-        </div>
-      </div>
-
-       <div class="flex mb-2">
-       <div class="rounded py-2 px-3 bg-grey-light" >
-         <p class="text-sm mt-1">
-          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
-          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
-          sadfasdfasdasdf
-         </p>
-        <p class="text-right text-xs text-grey-dark mt-1">
-         12:45 pm
-        </p>
-        </div>
-      </div>
-
-       <div class="flex mb-2">
-       <div class="rounded py-2 px-3 bg-grey-light" >
-         <p class="text-sm mt-1">
-          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
-          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
-          sadfasdfasdasdf
-         </p>
-        <p class="text-right text-xs text-grey-dark mt-1">
-         12:45 pm
-        </p>
-        </div>
-      </div>
-
-       <div class="flex mb-2">
-       <div class="rounded py-2 px-3 bg-grey-light" >
-         <p class="text-sm mt-1">
-          Q tal afsafasfsafsafsdasfasfasdsafsdfsfsadfsadfasd 
-          fdasfasdfasdfasdfasfsaddsaf dfasdfasfasdfasfasdfasdfdasfsadfas
-          sadfasdfasdasdf
-         </p>
-        <p class="text-right text-xs text-grey-dark mt-1">
-         12:45 pm
-        </p>
-        </div>
-      </div>
-
-   </div> 
+  
+  <div class="px-10 py-5 flex-1 overflow-y-auto h-128">
+        <div v-for="msg in msgs" :key="msg.id" >
+            <div  :class="msg.type" >
+                <div class="rounded py-2 px-3 bg-grey-lighter" >
+                  <p class="text-sm mt-1">{{ msg.txt }} </p>
+                 </div>
+            </div>
+        </div>  <!-- end v-for -->
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
+  name: 'DialogController',
   data () {
     return {
+      dialogs : [],
+      index  :  0,
+      thinktime : 0,
+      isthinktime : true
+
     }
-  }
+  },
+  computed: mapState(['msgs']),
+
 }
 </script>
 
 <style>
+
+.bot {
+  @apply flex mb-2;
+}
+
+.human {
+  @apply flex justify-end mb-2;
+} 
+
+
 </style>

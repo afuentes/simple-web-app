@@ -5,8 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state:{
-      flow: 'begin',        // begin|load| dialog| think | wait | end 
-      cmd:  'botstart',    //  botstart | botnextaction | usercmd
+      statemachine: 'start', // start | loading | waiting | end 
       usermsg:  '',         // msg from user
       msgs: [],
       options: [],
@@ -15,20 +14,19 @@ export default new Vuex.Store({
   mutations: {
     ADD_PROMPT: (state) => {
         var newMsg = {
-            txt: '',
+            txt: 'test',
             type: 'bot',
             isloading : true
         }
         state.total++;
-        //state.msgs.unshift(newMsg);
         state.msgs.push(newMsg);
     },
     UPDATE_MSG: (state,msg) => {
         state.msgs[state.total-1].txt = msg; 
         state.msgs[state.total-1].isloading = false; 
     },
-    SET_FLOW: (state,value) => {
-        state.flow = value;
+    SET_STATEMACHINE: (state,value) => {
+        state.statemachine = value;
     },
     ADD_OPTION: (state,option) => {
         state.options.push(option);
@@ -47,8 +45,8 @@ export default new Vuex.Store({
     updateMsg: (context, payload) => {
         context.commit("UPDATE_MSG", payload)
     },
-    setFlow: (context, payload) => {
-        context.commit("SET_FLOW", payload)
+    setStateMachine: (context, payload) => {
+        context.commit("SET_STATEMACHINE", payload)
     },
     addOption: (context, payload) => {
         context.commit("ADD_OPTION", payload)

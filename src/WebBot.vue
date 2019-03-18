@@ -2,36 +2,68 @@
  <div class="fixed pin flex items-center">       
   <div id="WebBot" class="fixed pin bg-grey-lightest opacity-75 z-10" >
      
-     <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
-  <!-- Header  -->
-  <header class="flex items-center justify-between flex-wrap bg-grey-light p-4">
-    <!-- Title -->
-  <div class="flex items-center flex-no-shrink text-white mr-6">
-    <span class="font-semibold mr-2 text-left flex-auto">WebBot App</span>
-  </div>
-  </header>
-  <!-- Chat messages -->  
-     <DialogController/>
-  <!-- input Message  -->
-     <InputController/>
-  </div>
+    <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+       <!-- Header  -->
+       <header class="flex items-center justify-between flex-wrap bg-grey-light p-4">
+            <!-- Title -->
+            <div class="flex items-center flex-no-shrink text-white mr-6">
+              <span class="font-semibold mr-2 text-left flex-auto">WebBot App</span>
+            </div>
+        </header>
 
-
+        <!-- Chat messages -->  
+         <DialogController/>
+        <!-- input Message  -->
+         <InputController/>
+    </div>
 
   </div>
  </div>
 </template>
 
 <script>
+import { mapState , mapMutations, mapActions } from 'vuex'
 import DialogController from './components/DialogController.vue'
 import InputController from './components/InputController.vue'
 
 export default {
   name: 'WebBot',
+  data: function () {
+    return {
+    }
+  },
   components: {
     DialogController,
     InputController
-  }
+  },
+  computed: mapState(['statemachine']),
+  mounted: function () {
+    this.$nextTick(function () {
+    // create TimerBotControl to Control Bot Interaction
+     this.timer = setInterval(() => {
+                 this.timerBot();
+                 }, 1000);
+     })
+  },
+  methods: {
+    ...mapMutations(['SET_STATEMACHINE','ADD_PROMPT']),
+    ...mapActions(['setStateMachine','addPrompt']),
+  timerBot: function() {
+              // validate state machine
+              if(this.statemachine == 'start'){
+                 //api.getdialog(this.flow,'txt',this.handlerResponse)
+                  this.addPrompt(); 
+                  this.setStateMachine('loanding');
+              }else if (this.statemachine == 'loading') {
+                 this.setStateMachine('end');
+              }else if (this.statemachine == 'waiting') {
+                 this.setStateMachine('end');
+              }else if (this.statemachine == 'end') {
+                 this.setStateMachine('end');
+              }
+
+    }
+  } // end methods
 }
 </script>
 
