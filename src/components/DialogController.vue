@@ -22,13 +22,75 @@ export default {
   data () {
     return {
       dialogs : [],
-      index  :  0,
-      thinktime : 0,
-      isthinktime : true
-
+      index   :  0
     }
   },
+  mounted: function () {
+  this.$nextTick(function () {
+    this.$parent.$on('start', this.start); // register to start dialog 
+    this.$parent.$on('end', this.start); // register to start dialog 
+  })
+  },
   computed: mapState(['msgs']),
+ methods: {
+    start: function() {
+             // call to request dialog
+             this.dialogResponse()
+             this.dialogHandler()
+             // *TODO . handler the dialog with Timer
+    },
+    end:  function(){
+
+    },
+    dialogHandler: function(dialog){
+
+    },
+    dialogResponse: function() {
+      this.dialogs = [ 
+        { 
+          type : 'txt',
+          delay : 1,
+          data:'this is message' 
+        },
+        {
+          type : 'txt',
+          delay : 2,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1,
+          data:'this is message'
+        },
+        {
+          type : 'option',
+          delay : 1,
+          data:'Quieres revisar nuestros servicios o nuestra demo',
+          option: ['demo','servicios','conversemos']
+        }
+      ]
+    } // end handlerDialog
+ } // end methods
 }
 </script>
 

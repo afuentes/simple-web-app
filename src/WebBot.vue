@@ -54,8 +54,10 @@ export default {
                  //api.getdialog(this.flow,'txt',this.handlerResponse)
                   this.addPrompt(); 
                   this.setStateMachine('loanding');
+                  // send message Dialog to start 
+                  this.$emit('start','');
               }else if (this.statemachine == 'loading') {
-                 this.setStateMachine('end');
+                 this.setStateMachine('loading');
               }else if (this.statemachine == 'waiting') {
                  this.setStateMachine('end');
               }else if (this.statemachine == 'end') {
