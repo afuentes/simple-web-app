@@ -51,11 +51,8 @@ export default {
   timerBot: function() {
               // validate state machine
               if(this.statemachine == 'start'){
-                 //api.getdialog(this.flow,'txt',this.handlerResponse)
-                  this.addPrompt(); 
+                 this.$emit('start','');  
                   this.setStateMachine('loanding');
-                  // send message Dialog to start 
-                  this.$emit('start','');
               }else if (this.statemachine == 'loading') {
                  this.setStateMachine('loading');
               }else if (this.statemachine == 'waiting') {

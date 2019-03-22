@@ -15,14 +15,15 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState , mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'DialogController',
   data () {
     return {
       dialogs : [],
-      index   :  0
+      index   :  0,
+      timer   : null
     }
   },
   mounted: function () {
@@ -33,58 +34,69 @@ export default {
   },
   computed: mapState(['msgs']),
  methods: {
+    ...mapMutations(['SET_STATEMACHINE','ADD_PROMPT','UPDATE_MSG']),
+    ...mapActions(['setStateMachine','addPrompt','updateMsg']),
     start: function() {
              // call to request dialog
-             this.dialogResponse()
+             this.getDialog()
              this.dialogHandler()
              // *TODO . handler the dialog with Timer
     },
     end:  function(){
-
     },
-    dialogHandler: function(dialog){
-
+    dialogHandler: function(){
+          this.addPrompt();
+          clearInterval(this.timer);
+          if( this.index < this.dialogs.length ) {
+              this.updateMsg(this.dialogs[this.index].data)
+              // Define Timer 
+              this.timer = setInterval(() => {
+                    this.dialogHandler();
+                    },this.dialogs[this.index].delay);
+              this.index++;      
+          }
+          
     },
-    dialogResponse: function() {
+    getDialog: function() {
       this.dialogs = [ 
         { 
           type : 'txt',
-          delay : 1,
+          delay : 1000,
           data:'this is message' 
         },
         {
           type : 'txt',
-          delay : 2,
+          delay : 3000,
           data:'this is message'
         },
         {
           type : 'txt',
-          delay : 1,
+          delay : 1000,
           data:'this is message'
         },
         {
           type : 'txt',
-          delay : 1,
+          delay : 1000,
           data:'this is message'
         },
         {
           type : 'txt',
-          delay : 1,
+          delay : 1000,
           data:'this is message'
         },
         {
           type : 'txt',
-          delay : 1,
+          delay : 1000,
           data:'this is message'
         },
         {
           type : 'txt',
-          delay : 1,
+          delay : 1000,
           data:'this is message'
         },
         {
           type : 'option',
-          delay : 1,
+          delay : 1000,
           data:'Quieres revisar nuestros servicios o nuestra demo',
           option: ['demo','servicios','conversemos']
         }
