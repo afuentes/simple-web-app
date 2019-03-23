@@ -16,7 +16,7 @@ $ npm -v
 6.9.0
 $ npm install -g @vue/cli 
 OR 
-$ npm update npm update -g @vue/cli # is installed
+$ npm update -g @vue/cli # is installed
 $ vue --version
 3.5.1
 

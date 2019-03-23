@@ -5,6 +5,9 @@
             <div  :class="msg.type" >
                 <div class="rounded py-2 px-3 bg-grey-lighter" >
                   <p class="text-sm mt-1">{{ msg.txt }} </p>
+                <div v-if="msg.type === 'option'">
+                    <CardController/>
+                </div>
                 <p class="text-right text-xs text-grey-dark mt-1">
                   {{ msg.createdAt }}
                 </p>
@@ -16,6 +19,7 @@
 
 <script>
 import { mapState , mapMutations, mapActions } from 'vuex'
+import CardController from './components/CardController.vue'
 
 export default {
   name: 'DialogController',
@@ -45,9 +49,9 @@ export default {
     end:  function(){
     },
     dialogHandler: function(){
-          this.addPrompt();
           clearInterval(this.timer);
           if( this.index < this.dialogs.length ) {
+              this.addPrompt();
               this.updateMsg(this.dialogs[this.index].data)
               // Define Timer 
               this.timer = setInterval(() => {
