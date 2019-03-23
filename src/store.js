@@ -15,16 +15,20 @@ export default new Vuex.Store({
   mutations: {
     ADD_PROMPT: (state) => {
         var newMsg = {
-            txt: 'test',
-            type: 'bot',
+            data: 'test',
+            source: 'bot',
+            type : null,
+            options : null,
             createdAt : moment().format('h:mm a'), // Now
             isloading : true
         }
         state.total++;
         state.msgs.push(newMsg);
     },
-    UPDATE_MSG: (state,msg) => {
-        state.msgs[state.total-1].txt = msg; 
+    UPDATE_MSG: (state,data) => {
+        state.msgs[state.total-1].data = data.data; 
+        state.msgs[state.total-1].type = data.type; 
+        state.msgs[state.total-1].options = data.options; 
         state.msgs[state.total-1].isloading = false; 
     },
     SET_STATEMACHINE: (state,value) => {

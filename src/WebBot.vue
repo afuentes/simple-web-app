@@ -28,13 +28,13 @@ import InputController from './components/InputController.vue'
 
 export default {
   name: 'WebBot',
-  data: function () {
-    return {
-    }
-  },
   components: {
     DialogController,
     InputController
+  },
+  data: function () {
+    return {
+    }
   },
   computed: mapState(['statemachine']),
   mounted: function () {

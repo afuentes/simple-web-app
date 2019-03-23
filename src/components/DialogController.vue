@@ -2,11 +2,17 @@
   
   <div class="px-10 py-5 flex-1 overflow-y-auto h-128">
         <div v-for="msg in msgs" :key="msg.id" >
-            <div  :class="msg.type" >
+            <div  :class="msg.source" >
                 <div class="rounded py-2 px-3 bg-grey-lighter" >
-                  <p class="text-sm mt-1">{{ msg.txt }} </p>
-                <div v-if="msg.type === 'option'">
-                    <CardController/>
+                  <p class="text-sm mt-1">{{ msg.data }} </p>
+                  <div v-if="msg.type === 'option'">
+                    <div class="inline-flex">
+                    <CardController 
+                       v-for="option in msg.options"
+                       v-bind:key="option.id"
+                       v-bind:label="option.label"
+                     ></CardController>
+                     </div>
                 </div>
                 <p class="text-right text-xs text-grey-dark mt-1">
                   {{ msg.createdAt }}
@@ -19,10 +25,13 @@
 
 <script>
 import { mapState , mapMutations, mapActions } from 'vuex'
-import CardController from './components/CardController.vue'
+import CardController from '@/components/CardController.vue'
 
 export default {
   name: 'DialogController',
+  components: {
+    CardController
+  },
   data () {
     return {
       dialogs : [],
@@ -52,7 +61,7 @@ export default {
           clearInterval(this.timer);
           if( this.index < this.dialogs.length ) {
               this.addPrompt();
-              this.updateMsg(this.dialogs[this.index].data)
+              this.updateMsg(this.dialogs[this.index])
               // Define Timer 
               this.timer = setInterval(() => {
                     this.dialogHandler();
@@ -102,7 +111,20 @@ export default {
           type : 'option',
           delay : 1000,
           data:'Quieres revisar nuestros servicios o nuestra demo',
-          option: ['demo','servicios','conversemos']
+          options: [
+                {
+                   id : 0,
+                   label:'demo'
+                 },
+                {
+                   id : 1,
+                   label:'sales'
+                 },
+                 {
+                   id : 2,
+                   label:'other'
+                 },         
+          ]
         }
       ]
     } // end handlerDialog
