@@ -1,6 +1,6 @@
 <template>
   
-  <div class="px-10 py-5 flex-1 overflow-y-auto h-128">
+  <div  class="px-10 py-5 flex-1 overflow-y-auto h-128" v-chat-scroll>
         <div v-for="msg in msgs" :key="msg.id" >
             <div  :class="msg.source" >
                 <div class="rounded py-2 px-3 bg-grey-lighter" >
@@ -52,19 +52,19 @@ export default {
     start: function() {
              // call to request dialog
              this.getDialog()
-             this.dialogHandler()
+             this.handleDialog()
              // *TODO . handler the dialog with Timer
     },
     end:  function(){
     },
-    dialogHandler: function(){
+    handleDialog: function(){
           clearInterval(this.timer);
           if( this.index < this.dialogs.length ) {
               this.addPrompt();
               this.updateMsg(this.dialogs[this.index])
               // Define Timer 
               this.timer = setInterval(() => {
-                    this.dialogHandler();
+                    this.handleDialog();
                     },this.dialogs[this.index].delay);
               this.index++;      
           }

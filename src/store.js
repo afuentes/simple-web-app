@@ -9,7 +9,6 @@ export default new Vuex.Store({
       statemachine: 'start', // start | loading | waiting | end 
       usermsg:  '',         // msg from user
       msgs: [],
-      options: [],
       total : 0
   },
   mutations: {
@@ -35,7 +34,15 @@ export default new Vuex.Store({
         state.statemachine = value;
     },
     ADD_OPTION: (state,option) => {
-        state.options.push(option);
+        var newMsg = {
+            data: option,
+            source: 'human',
+            type : null,
+            createdAt : moment().format('h:mm a'), // Now
+            isloading : false
+        }
+        state.total++;
+        state.msgs.push(newMsg);
     },
   },
   actions: {
