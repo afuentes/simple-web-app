@@ -1,7 +1,7 @@
 <template>
   <div> 
      <div>
-       <img class="w-1/2" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+       <img class="w-1/2" :src="option.src" >
      </div>
   </div>
 </template>

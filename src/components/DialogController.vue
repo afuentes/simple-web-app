@@ -16,7 +16,7 @@
                      </div> <!-- end if option -->
                      <div v-else-if="msg.type === 'card'" >
                           <CardController 
-                           v-bind:option="option">
+                           v-bind:option="msg.options">
                           </CardController>
                     </div>  <!-- end if card --> 
                 <p class="text-right text-xs text-grey-dark mt-1">
@@ -109,17 +109,18 @@ export default {
           data:'this is message'
         },
         {
-          type : 'txt',
-          delay : 1000,
-          data:'this is message'
-        },
-        {
           type : 'card',
           delay : 3000,
           data:'this is message',
-          options : [
-
-          ]
+          options : {
+            src : 'https://tailwindcss.com/img/card-top.jpg',
+            alt : 'test'
+          }
+        },
+        {
+          type : 'txt',
+          delay : 1000,
+          data:'this is message'
         },
         {
           type : 'option',
