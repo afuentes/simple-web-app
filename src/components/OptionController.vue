@@ -1,8 +1,8 @@
 <template>
   <div> 
-     <div>
-       <img class="w-1/2" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
-     </div>
+     <button class="bg-grey-darkest rounded-full hover:bg-grey-dark text-white text-xs py-1 px-4" v-on:click.stop.prevent="cmdSend" >
+        {{option.label}}
+     </button>
   </div>
 </template>
 
