@@ -1,7 +1,6 @@
 <template>
  <div class="fixed pin flex items-center">       
   <div id="WebBot" class="fixed pin bg-grey-lightest opacity-75 z-10" >
-     
     <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
        <!-- Header  -->
        <header class="flex items-center justify-between flex-wrap bg-grey-light p-4">
@@ -10,13 +9,11 @@
               <span class="font-semibold mr-2 text-left flex-auto">WebBot App</span>
             </div>
         </header>
-
         <!-- Chat messages -->  
          <DialogController/>
         <!-- input Message  -->
          <InputController/>
     </div>
-
   </div>
  </div>
 </template>
