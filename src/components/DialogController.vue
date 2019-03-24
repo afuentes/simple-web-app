@@ -1,6 +1,6 @@
 <template>
   
-  <div  class="px-10 py-5 flex-1 overflow-y-auto h-128" v-chat-scroll>
+  <div  class="flex-1 mx-auto p-8  overflow-y-auto h-128" v-chat-scroll>
         <div v-for="msg in msgs" :key="msg.id" >
             <div  :class="msg.source" >
               

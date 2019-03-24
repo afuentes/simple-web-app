@@ -1,5 +1,5 @@
 <template>
- <div class="fixed pin flex items-center">       
+ <div class="flex flex-col h-full">       
   <div id="WebBot" class="fixed pin bg-grey-lightest opacity-75 z-10" >
     <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
        <!-- Header  -->
@@ -65,8 +65,10 @@ export default {
 
 <style>
 
+
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
+
 
 </style>
