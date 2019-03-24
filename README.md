@@ -60,3 +60,5 @@ $ npm run server # validate vue page is running
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 See [Tailwind CSS Site](https://tailwindcss.com/).
+
+See [SVG Loader] (https://samherbert.net/svg-loaders/).

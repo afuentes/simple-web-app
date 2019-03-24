@@ -14,11 +14,11 @@ export default new Vuex.Store({
   mutations: {
     ADD_PROMPT: (state) => {
         var newMsg = {
-            data: 'test',
+            data: 'loading...',
             source: 'bot',
             type : null,
             options : null,
-            createdAt : moment().format('h:mm a'), // Now
+            createdAt : null,
             isloading : true
         }
         state.total++;
@@ -27,6 +27,7 @@ export default new Vuex.Store({
     UPDATE_MSG: (state,data) => {
         state.msgs[state.total-1].data = data.data; 
         state.msgs[state.total-1].type = data.type; 
+        state.msgs[state.total-1].createdAt = moment().format('h:mm a'),
         state.msgs[state.total-1].options = data.options; 
         state.msgs[state.total-1].isloading = false; 
     },
