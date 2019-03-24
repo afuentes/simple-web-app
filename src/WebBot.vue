@@ -1,6 +1,6 @@
 <template>
- <div class="flex flex-col h-full">       
-  <div id="WebBot" class="fixed pin bg-grey-lightest opacity-75 z-10" >
+ <div class="container mx-auto px-4">       
+  <div id="WebBot" class="fixed pin bg-grey-lightest opacity-75 z-5" >
     <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
        <!-- Header  -->
        <header class="flex items-center justify-between flex-wrap bg-grey-light p-4">
