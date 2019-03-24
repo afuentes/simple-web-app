@@ -1,7 +1,7 @@
 <template>
   <div> 
      <button class="bg-grey-darkest rounded-full hover:bg-grey-dark text-white text-xs py-1 px-4" v-on:click.stop.prevent="cmdSend" >
-        {{label}}
+        {{option.label}}
      </button>
   </div>
 </template>
@@ -11,13 +11,13 @@ import { mapMutations, mapActions } from 'vuex'
 
 export default {
   props: {
-    label : String
+    option : Object
   },
   methods: {
    ...mapMutations(['ADD_OPTION']),
     ...mapActions(['addOption']), 
     cmdSend: function() {
-          this.addOption(this.label);
+          this.addOption(this.option.label);
     }
   }
 }

@@ -5,13 +5,14 @@
             <div  :class="msg.source" >
                 <div class="rounded py-2 px-3 bg-grey-lighter" >
                   <p class="text-sm mt-1">{{ msg.data }} </p>
-                  <div v-if="msg.type === 'option'">
+                  <div v-if="msg.type === 'option'" >
                     <div class="inline-flex">
-                    <CardController 
-                       v-for="option in msg.options"
-                       v-bind:key="option.id"
-                       v-bind:label="option.label"
+                      <CardController 
+                           v-for="option in msg.options"
+                           v-bind:key="option.id"
+                           v-bind:option="option"
                      ></CardController>
+
                      </div>
                 </div>
                 <p class="text-right text-xs text-grey-dark mt-1">
