@@ -1,21 +1,16 @@
-<template>
- <div class="container mx-auto px-4">       
-  <div id="WebBot" class="fixed pin bg-grey-lightest opacity-75 z-5" >
-    <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+<template>  
+ <div class="flex flex-col min-h-screen" >   
        <!-- Header  -->
-       <header class="flex items-center justify-between flex-wrap bg-grey-light p-4">
-            <!-- Title -->
-            <div class="flex items-center flex-no-shrink text-white mr-6">
-              <span class="font-semibold mr-2 text-left flex-auto">WebBot App</span>
-            </div>
-        </header>
+       <header class="w-full border-b border-grey p-2 text-center">
+        Web Bot App
+       </header>
         <!-- Chat messages -->  
+        <div  class="flex-1 p-2 overflow-y-auto" v-chat-scroll> 
          <DialogController/>
-        <!-- input Message  -->
+        </div>
+        <!-- Input Message  -->
          <InputController/>
-    </div>
   </div>
- </div>
 </template>
 
 <script>
@@ -65,10 +60,8 @@ export default {
 
 <style>
 
-
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
-
 
 </style>
