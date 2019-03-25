@@ -1,16 +1,18 @@
 <template>  
- <div class="flex flex-col min-h-screen" >   
+ <div class="min-h-screen " >  
+    <div class="flex flex-col w-full fixed pin-l pin-y"> 
        <!-- Header  -->
        <header class="w-full border-b border-grey p-2 text-center">
         Web Bot App
        </header>
         <!-- Chat messages -->  
-        <div  class="flex-1 p-2 overflow-y-auto" v-chat-scroll> 
-         <DialogController/>
-        </div>
+          <div  class="flex-1 p-2 overflow-y-auto" v-chat-scroll> 
+          <DialogController/>
+          </div>
         <!-- Input Message  -->
          <InputController/>
   </div>
+</div>
 </template>
 
 <script>
@@ -63,5 +65,6 @@ export default {
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
 </style>
