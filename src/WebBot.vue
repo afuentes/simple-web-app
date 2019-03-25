@@ -2,11 +2,11 @@
  <div class="min-h-screen " >  
     <div class="flex flex-col w-full fixed pin-l pin-y"> 
        <!-- Header  -->
-       <header class="w-full border-b border-grey p-2 text-center">
+       <header class="w-full border-b border-grey p-1 text-center">
         Web Bot App
        </header>
         <!-- Chat messages -->  
-          <div  class="flex-1 p-2 overflow-y-auto" v-chat-scroll> 
+          <div  class="flex-1 p-1 overflow-y-auto" v-chat-scroll> 
           <DialogController/>
           </div>
         <!-- Input Message  -->
