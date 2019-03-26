@@ -67,4 +67,5 @@ export default {
 @tailwind utilities;
 @tailwind screens;
 
+
 </style>
