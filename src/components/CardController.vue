@@ -1,7 +1,7 @@
 <template>
   <div> 
      <div>
-       <img class="w-1/2" :src="option.src" >
+       <img class="w-1/2 h-48" :src="option.src" >
      </div>
   </div>
 </template>
