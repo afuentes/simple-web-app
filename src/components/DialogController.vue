@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  ref='dialog' class="flex-1 p-1 overflow-y-auto">  
         <div v-for="msg in msgs" :key="msg.id" >
             <div  :class="msg.source" >
                 <div class="rounded py-2 px-3 bg-grey-lighter" >
@@ -51,7 +51,12 @@ export default {
     this.$parent.$on('end', this.start); // register to start dialog 
   })
   },
+  updated: function () {           
+    var div = this.$refs.dialog
+    div.scrollTop = div.scrollHeight - div.clientHeight;
+  },
   computed: mapState(['msgs']),
+  
  methods: {
     ...mapMutations(['SET_STATEMACHINE','ADD_PROMPT','UPDATE_MSG']),
     ...mapActions(['setStateMachine','addPrompt','updateMsg']),

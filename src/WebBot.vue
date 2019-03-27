@@ -6,9 +6,7 @@
         Web Bot App
        </header>
         <!-- Chat messages -->  
-          <div  class="flex-1 p-1 overflow-y-auto"> 
           <DialogController/>
-          </div>
         <!-- Input Message  -->
          <InputController/>
   </div>
