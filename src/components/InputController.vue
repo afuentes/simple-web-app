@@ -23,18 +23,13 @@ export default {
       message : ''
     }
   },  
-  mounted: function () {
-  this.$nextTick(function () {
-    this.$parent.$on('getDialog', this.getDialog); // register to start dialog 
-  })
-  },
   methods: {
     ...mapMutations(['ADD_OPTION']),
     ...mapActions(['addOption']), 
      sendMessage: function() {
          this.addOption(this.message);
+         this.$parent.$emit('getDialog', this.message);
          this.message = null;
-         this.$$emit('getDialog',this.message)
      }
   }
 }

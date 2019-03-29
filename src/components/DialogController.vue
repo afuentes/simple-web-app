@@ -49,8 +49,9 @@ export default {
   },
   mounted: function () {
   this.$nextTick(function () {
-    this.$parent.$on('start', this.start); // register to start dialog 
-    this.$parent.$on('end', this.end); // register to start dialog 
+    this.$parent.$on('start', this.start); 
+    this.$parent.$on('end', this.end); 
+    this.$parent.$on('getDialog', this.getDialog); 
   })
   },
   updated: function () {           
