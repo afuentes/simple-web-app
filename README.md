@@ -34,6 +34,7 @@ $ npm run serve # validate vue page is running
 $ npm install vuex --save  
 $ npm install tailwindcss --save-dev
 $ npm install moment --save
+$ npm install axios  --save
 $ npx tailwind init tailwind.js
 ```
 * Note : add this lines in App.vue 
@@ -53,6 +54,76 @@ $ git clone https://github.com/afuentes/simple-web-app.git
 $ cd simple-web-app
 $ npm install
 $ npm run server # validate vue page is running 
+```
+
+### 4- JSON Dialog format Example 
+
+```json
+     this.dialogs = [ 
+        { 
+          type : 'txt',
+          delay : 2000,
+          data:'this is message' 
+        },
+        {
+          type : 'txt',
+          delay : 3000,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1000,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1000,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1000,
+          data:'this is message'
+        },
+        {
+          type : 'txt',
+          delay : 1000,
+          data:'this is message'
+        },
+        {
+          type : 'card',
+          delay : 3000,
+          data:'this is message',
+          options : {
+            src : 'https://tailwindcss.com/img/card-top.jpg',
+            alt : 'test'
+          }
+        },
+        {
+          type : 'txt',
+          delay : 1000,
+          data:'this is message'
+        },
+        {
+          type : 'option',
+          delay : 1000,
+          data:'Quieres revisar nuestros servicios o nuestra demo',
+          options: [
+                {
+                   id : 0,
+                   label:'demo'
+                 },
+                {
+                   id : 1,
+                   label:'sales'
+                 },
+                 {
+                   id : 2,
+                   label:'other'
+                 },         
+          ]
+        }
+      ]
 ```
 
 ### Reference

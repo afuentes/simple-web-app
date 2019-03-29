@@ -32,6 +32,8 @@
 import { mapState , mapMutations, mapActions } from 'vuex'
 import OptionController from '@/components/OptionController.vue'
 import CardController from '@/components/CardController.vue'
+import APIService from '@/APIService.js';
+
 export default {
   name: 'DialogController',
   components: {
@@ -61,12 +63,8 @@ export default {
     ...mapMutations(['SET_STATEMACHINE','ADD_PROMPT','UPDATE_MSG']),
     ...mapActions(['setStateMachine','addPrompt','updateMsg']),
     start: function() {
-             // call to request dialog
              this.addPrompt();
-             this.getDialog()
-             this.timer = setInterval(() => {
-                    this.handleDialog();
-                    },this.dialogs[this.index].delay);
+             this.getDialog('d_start.json');
     },
     end:  function() {
     },
@@ -79,80 +77,23 @@ export default {
                     this.handleDialog();
                     },this.dialogs[this.index].delay);
               this.index++; 
-     
           }
           if(this.index < this.dialogs.length){
                this.addPrompt();
           }
           
     },
-    getDialog: function() {
-      this.dialogs = [ 
-        { 
-          type : 'txt',
-          delay : 2000,
-          data:'this is message' 
-        },
-        {
-          type : 'txt',
-          delay : 3000,
-          data:'this is message'
-        },
-        {
-          type : 'txt',
-          delay : 1000,
-          data:'this is message'
-        },
-        {
-          type : 'txt',
-          delay : 1000,
-          data:'this is message'
-        },
-        {
-          type : 'txt',
-          delay : 1000,
-          data:'this is message'
-        },
-        {
-          type : 'txt',
-          delay : 1000,
-          data:'this is message'
-        },
-        {
-          type : 'card',
-          delay : 3000,
-          data:'this is message',
-          options : {
-            src : 'https://tailwindcss.com/img/card-top.jpg',
-            alt : 'test'
-          }
-        },
-        {
-          type : 'txt',
-          delay : 1000,
-          data:'this is message'
-        },
-        {
-          type : 'option',
-          delay : 1000,
-          data:'Quieres revisar nuestros servicios o nuestra demo',
-          options: [
-                {
-                   id : 0,
-                   label:'demo'
-                 },
-                {
-                   id : 1,
-                   label:'sales'
-                 },
-                 {
-                   id : 2,
-                   label:'other'
-                 },         
-          ]
-        }
-      ]
-    } // end handlerDialog
+    getDialog: function(dialog) {
+          APIService.get(dialog).then((response) => {
+              this.dialogs = response.data.payload;
+              this.timer = setInterval(() => {
+                    this.handleDialog();
+                    },this.dialogs[this.index].delay);
+              }).catch((error) => {
+                    this.dialogs = '[ { type: txt , delay : 1000 , data :'+error+' } ]';
+              });
+
+    } // end getDialog
  } // end methods
 }
 </script>
