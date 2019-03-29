@@ -53,10 +53,7 @@ export default {
                  this.setStateMachine('end');
               }
 
-    },
-     sendCmd: function(cmd) {
-        this.$emit('cmd',cmd); 
-     }
+    }
   } // end methods
 }
 </script>
