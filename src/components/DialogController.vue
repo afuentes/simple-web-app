@@ -50,7 +50,7 @@ export default {
   mounted: function () {
   this.$nextTick(function () {
     this.$parent.$on('start', this.start); // register to start dialog 
-    this.$parent.$on('end', this.start); // register to start dialog 
+    this.$parent.$on('end', this.end); // register to start dialog 
   })
   },
   updated: function () {           

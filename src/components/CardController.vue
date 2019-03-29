@@ -18,6 +18,7 @@ export default {
     ...mapActions(['addOption']), 
     cmdSend: function() {
           this.addOption(this.option.label);
+
     }
   }
 }
