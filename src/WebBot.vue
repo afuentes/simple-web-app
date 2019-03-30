@@ -53,7 +53,7 @@ export default {
                  this.setStateMachine('end');
               }
 
-    }
+    }   
   } // end methods
 }
 </script>

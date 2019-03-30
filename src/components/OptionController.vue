@@ -13,11 +13,6 @@ export default {
   props: {
     option : Object
   },
-  mounted: function () {
-  this.$nextTick(function () {
-    this.$parent.$on('getDialog', this.getDialog); // register to start dialog 
-  })
-  },
   methods: {
    ...mapMutations(['ADD_OPTION']),
     ...mapActions(['addOption']), 
