@@ -28,7 +28,7 @@ export default {
     ...mapActions(['addOption']), 
      sendMessage: function() {
          this.addOption(this.message);
-         this.$parent.$emit('getDialog', this.message);
+         this.$root.$emit('getDialog', this.message);
          this.message = null;
      }
   }

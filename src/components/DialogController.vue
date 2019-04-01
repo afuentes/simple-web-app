@@ -49,10 +49,10 @@ export default {
   },
   mounted: function () {
   this.$nextTick(function () {
-    this.$on('getDialog', this.getDialog); 
+
     this.$parent.$on('start', this.start); 
     this.$parent.$on('end', this.end); 
-    this.$parent.$on('getDialog', this.getDialog); 
+    this.$root.$on('getDialog', this.getDialog); 
   })
   },
   updated: function () {           
@@ -95,7 +95,7 @@ export default {
               }).catch((error) => {
                     this.dialogs = '[ { type: txt , delay : 1000 , data :'+error+' } ]';
               });
-              
+
     } // end getDialog
  } // end methods
 }
