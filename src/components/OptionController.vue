@@ -18,7 +18,7 @@ export default {
     ...mapActions(['addOption']), 
     cmdSend: function() {
           this.addOption(this.option.label);
-          this.$emit('getDialog', this.message);
+          this.$root.$emit('getDialog', this.message);
     }
   }
 }
