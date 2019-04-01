@@ -49,6 +49,7 @@ export default {
   },
   mounted: function () {
   this.$nextTick(function () {
+    this.$on('getDialog', this.getDialog); 
     this.$parent.$on('start', this.start); 
     this.$parent.$on('end', this.end); 
     this.$parent.$on('getDialog', this.getDialog); 
@@ -85,6 +86,7 @@ export default {
           
     },
     getDialog: function(dialog) {
+
           APIService.get(dialog).then((response) => {
               this.dialogs = response.data.payload;
               this.timer = setInterval(() => {
@@ -93,7 +95,7 @@ export default {
               }).catch((error) => {
                     this.dialogs = '[ { type: txt , delay : 1000 , data :'+error+' } ]';
               });
-
+              
     } // end getDialog
  } // end methods
 }
