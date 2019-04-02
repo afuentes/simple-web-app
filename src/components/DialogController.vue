@@ -68,6 +68,7 @@ export default {
     },
     handleDialog: function(){
           clearInterval(this.timer);
+
           if( this.index < this.dialogs.length ) {
               this.updateMsg(this.dialogs[this.index])
               // Define Timer 
@@ -79,6 +80,9 @@ export default {
           if(this.index < this.dialogs.length){
                this.addPrompt();
           }
+
+        // ** TODO : handler disable/enable inputcontroller 
+
           
     },
     getDialog: function(dialog) {
