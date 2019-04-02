@@ -6,17 +6,13 @@
                   <div v-show="msg.isloading" ></div>
                   <p class="text-sm mt-1">{{ msg.data }} </p>
                   <div v-if="msg.type === 'option'" >
-                      <div class="inline-flex">
                           <OptionController 
-                           v-for="option in msg.options"
-                           v-bind:key="option.id"
-                           v-bind:option="option">
+                           v-bind:options="msg.options">
                           </OptionController>
-                       </div>
                      </div> <!-- end if option -->
                      <div v-else-if="msg.type === 'card'" >
                           <CardController 
-                           v-bind:option="msg.options">
+                              v-bind:options="msg.options">
                           </CardController>
                     </div>  <!-- end if card --> 
                 <p class="text-right text-xs text-grey-dark mt-1">
