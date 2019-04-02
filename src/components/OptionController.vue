@@ -2,7 +2,7 @@
   <div> 
      <div v-for="option in options" :key="option.id" class="inline-flex" >
      <button class="bg-grey-darkest rounded-full hover:bg-grey-dark text-white text-xs py-1 px-4" 
-     v-on:click.stop.prevent="() => { cmdSend(option.label) } " >
+     v-on:click.stop.prevent="cmdSend(option.label)" >
         {{option.label}}
      </button>
      </div>
