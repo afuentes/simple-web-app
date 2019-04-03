@@ -27,7 +27,7 @@ export default {
             isDisabled: function(){
               if(this.statemachine == 'waiting'){
                  return false;
-              }else {
+              }else{
                  return true;
               }
     },
