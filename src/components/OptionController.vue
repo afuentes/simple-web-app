@@ -19,12 +19,20 @@ export default {
                  default: () => []
                }
   },
+  data: function () {
+    return {
+      isclicked: false
+    }
+  },
   methods: {
    ...mapMutations(['ADD_OPTION']),
     ...mapActions(['addOption']), 
     cmdSend: function(label) {
+          if(!this.isclicked){
           this.addOption(label);
           this.$root.$emit('getDialog',label);
+          this.isclicked = true;
+          }
     }
   }
 }
