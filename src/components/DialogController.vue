@@ -61,14 +61,13 @@ export default {
     ...mapMutations(['SET_STATEMACHINE','ADD_PROMPT','UPDATE_MSG']),
     ...mapActions(['setStateMachine','addPrompt','updateMsg']),
     start: function() {
-             this.addPrompt();
              this.getDialog('d_start');
     },
     end:  function() {
     },
     handleDialog: function(){
           clearInterval(this.timer);
-
+          
           if( this.index < this.dialogs.length ) {
               this.updateMsg(this.dialogs[this.index])
               // Define Timer 
@@ -85,11 +84,12 @@ export default {
     },
     getDialog: function(dialog) {
           this.index = 0; // reset dialog array
+          this.addPrompt();
           APIService.get(dialog).then((response) => {
               this.dialogs = response.data.payload;
               this.timer = setInterval(() => {
                     this.handleDialog();
-                    },this.dialogs[this.index].delay);
+                    },this.dialogs[0].delay);
               }).catch((error) => {
                     this.dialogs = '[ { type: txt , delay : 1000 , data :'+error+' } ]';
               });
