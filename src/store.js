@@ -7,9 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state:{
       statemachine: 'start', // start | loading | waiting | end 
-      usermsg:  '',         // msg from user
-      msgs: [],
-      total : 0
+      msgs: []
   },
   mutations: {
     ADD_PROMPT: (state) => {
@@ -21,15 +19,15 @@ export default new Vuex.Store({
             createdAt : null,
             isloading : true
         }
-        state.total++;
         state.msgs.push(newMsg);
     },
     UPDATE_MSG: (state,data) => {
-        state.msgs[state.total-1].data = data.data; 
-        state.msgs[state.total-1].type = data.type; 
-        state.msgs[state.total-1].createdAt = moment().format('h:mm a'),
-        state.msgs[state.total-1].options = data.options; 
-        state.msgs[state.total-1].isloading = false; 
+        var msg = state.msgs[state.msgs.length-1];
+        msg.data = data.data; 
+        msg.type = data.type; 
+        msg.createdAt = moment().format('h:mm a'),
+        msg.options = data.options; 
+        msg.isloading = false; 
     },
     SET_STATEMACHINE: (state,value) => {
         state.statemachine = value;
@@ -42,7 +40,6 @@ export default new Vuex.Store({
             createdAt : moment().format('h:mm a'), // Now
             isloading : false
         }
-        state.total++;
         state.msgs.push(newMsg);
     },
   },
