@@ -4,7 +4,7 @@ const RESOURCE_NAME = '/dialog';
  
 export default {
   get(id) {
-    return Axios.get(`${RESOURCE_NAME}/${id+'.json'}`);
+    return Axios.get(RESOURCE_NAME+"/"+id+".json");
   }
   /**  TODO define all method
   create(data) {
