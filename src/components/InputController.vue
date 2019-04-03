@@ -24,13 +24,6 @@ export default {
     }
   },  
   computed: mapState(['statemachine']),
-            isDisabled: function(){
-              if(this.statemachine == 'waiting'){
-                 return false;
-              }else{
-                 return true;
-              }
-    },
   methods: {
     ...mapMutations(['ADD_OPTION']),
     ...mapActions(['addOption']), 
@@ -38,6 +31,13 @@ export default {
          this.addOption(this.message);
          this.$root.$emit('getDialog', this.message);
          this.message = null;
+     },
+      isDisabled: function(){
+             if(this.statemachine == 'waiting'){
+                return false;
+             } else { 
+                return true; 
+             }
      }
   }
 }

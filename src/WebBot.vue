@@ -2,13 +2,13 @@
  <div class="min-h-screen " >  
     <div class="flex flex-col w-full fixed pin-l pin-y"> 
        <!-- Header  -->
-       <header class="w-full border-b border-grey p-1 text-center">
+       <header class="w-full border-b border-grey p-1 text-center" v-show="false" >
         Web Bot App
-       </header>
+       </header >
         <!-- Chat messages -->  
           <DialogController/>
         <!-- Input Message  -->
-         <InputController />
+         <InputController v-show="true" />
   </div>
 </div>
 </template>
