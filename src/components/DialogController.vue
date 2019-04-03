@@ -62,7 +62,7 @@ export default {
     ...mapActions(['setStateMachine','addPrompt','updateMsg']),
     start: function() {
              this.addPrompt();
-             this.getDialog('d_start.json');
+             this.getDialog('d_start');
     },
     end:  function() {
     },
