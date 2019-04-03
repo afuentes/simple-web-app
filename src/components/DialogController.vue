@@ -82,8 +82,6 @@ export default {
           }
 
         // ** TODO : handler disable/enable inputcontroller 
-
-          
     },
     getDialog: function(dialog) {
 
