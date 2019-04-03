@@ -84,7 +84,7 @@ export default {
         // ** TODO : handler disable/enable inputcontroller 
     },
     getDialog: function(dialog) {
-
+          this.index = 0; // reset dialog array
           APIService.get(dialog).then((response) => {
               this.dialogs = response.data.payload;
               this.timer = setInterval(() => {
