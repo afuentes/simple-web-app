@@ -56,7 +56,15 @@ $ npm install
 $ npm run server # validate vue page is running 
 ```
 
-### 4- JSON Dialog format Example 
+### 4-  Updated dependencies Vue Project
+
+```
+$ npm i -g npm-check-updates
+$ ncu -u
+$ npm install
+```
+
+### 5- JSON Dialog format Example 
 
 ```json
      this.dialogs = [ 
