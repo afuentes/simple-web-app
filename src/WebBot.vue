@@ -1,5 +1,5 @@
 <template>  
- <div class="min-h-screen " >  
+ <div class="min-h-screen" >  
     <div class="flex flex-col w-full fixed pin-l pin-y"> 
        <!-- Header  -->
        <header class="w-full border-b border-grey p-1 text-center" v-show="false" >
@@ -60,10 +60,13 @@ export default {
 
 <style>
 
+body {
+  background-image: url(assets/bg.png);
+}
+
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
 @tailwind screens;
-
 
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <div  ref='dialog' class="flex-1 p-1 overflow-y-auto">  
+  <div  ref='dialog' class="flex-1 p-1 overflow-y-auto" >  
         <div v-for="msg in msgs" :key="msg.id" >
             <div  :class="msg.source" >
-                <div class="rounded py-2 px-3 bg-grey-lighter" >
+                <div class="rounded py-2 px-3 bg-white" >
                   <div v-show="msg.isloading" ></div>
                   <p class="text-sm mt-1">{{ msg.data }} </p>
                   <div v-if="msg.type === 'option'" >
