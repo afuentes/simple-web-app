@@ -2,9 +2,9 @@
   <div  ref='dialog' class="flex-1 p-1 overflow-y-auto" >  
         <div v-for="msg in msgs" :key="msg.id" >
             <div  :class="msg.source" >
-                <div class="rounded py-2 px-3 bg" >
+                <div class="rounded-full py-2 px-3 bg" >
                   <div v-show="msg.isloading" ></div>
-                  <p class="text-sm mt-1">{{ msg.data }} </p>
+                  <p class="text-white text-sm mt-1">{{ msg.data }} </p>
                   <div v-if="msg.type === 'option'" >
                           <OptionController 
                            v-bind:options="msg.options">
@@ -15,7 +15,7 @@
                               v-bind:options="msg.options">
                           </CardController>
                     </div>  <!-- end if card --> 
-                <p class="text-right text-xs text-grey-dark mt-1">
+                <p class="text-grey-light text-right text-xs mt-1">
                   {{ msg.createdAt }}
                 </p>
                  </div>
