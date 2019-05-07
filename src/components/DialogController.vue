@@ -2,7 +2,7 @@
   <div  ref='dialog' class="flex-1 p-1 overflow-y-auto" >  
         <div v-for="msg in msgs" :key="msg.id" >
             <div  :class="msg.source" >
-                <div class="rounded-full py-2 px-3 bg" >
+                <div class="rounded-lg py-2 px-3 bg" >
                   <div v-show="msg.isloading" ></div>
                   <p class="text-white text-sm mt-1">{{ msg.data }} </p>
                   <div v-if="msg.type === 'option'" >
