@@ -12,7 +12,7 @@ export default new Vuex.Store({
   mutations: {
     ADD_PROMPT: (state) => {
         var newMsg = {
-            data: 'loading...',
+            data: '',
             source: 'bot',
             type : null,
             options : null,

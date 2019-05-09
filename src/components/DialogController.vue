@@ -3,7 +3,22 @@
         <div v-for="msg in msgs" :key="msg.id" >
             <div  :class="msg.source" >
                 <div class="rounded-lg py-2 px-3 bg" >
-                  <div v-show="msg.isloading" ></div> 
+                  <div v-show="msg.isloading" >
+                   <svg width="60px" height="14px" viewBox="0 0 60 14">
+                     <rect x="10" y="0" width="5" height="14" fill="#FFFFFF">
+                       <animate attributeName="y" values="5;14;5" begin="0s" dur="1s" repeatCount="indefinite" />
+                     </rect> 
+                     <rect x="20" y="0" width="5" height="14" fill="#FFFFFF">
+                       <animate attributeName="y" values="5;14;5" begin="0.2s" dur="1s" repeatCount="indefinite" />
+                     </rect> 
+                     <rect x="30" y="0" width="5" height="14" fill="#FFFFFF">
+                       <animate attributeName="y" values="5;14;5" begin="0.4s" dur="1s" repeatCount="indefinite" />
+                     </rect> 
+                     <rect x="40" y="0" width="5" height="14" fill="#FFFFFF">
+                       <animate attributeName="y" values="5;14;5" begin="0.6s" dur="1s" repeatCount="indefinite" />
+                     </rect> 
+                   </svg>
+                  </div> 
                   <p class="text-white text-sm mt-1">{{ msg.data }} </p>
                   <div v-if="msg.type === 'option'" >
                           <OptionController 
