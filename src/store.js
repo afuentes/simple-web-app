@@ -23,7 +23,12 @@ export default new Vuex.Store({
     },
     UPDATE_MSG: (state,data) => {
         var msg = state.msgs[state.msgs.length-1];
-        msg.data = data.data; 
+        // Minimal length of data , fill with spaces
+        if(data.data.length < 8) {
+            msg.data = data.data.padEnd(10); 
+        }else {
+            msg.data = data.data;    
+        }
         msg.type = data.type; 
         msg.createdAt = moment().format('h:mm a'),
         msg.options = data.options; 
