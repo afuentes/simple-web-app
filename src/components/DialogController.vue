@@ -5,18 +5,22 @@
                 <div class="rounded-lg py-2 px-3 bg" >
                   <div v-show="msg.isloading" >
                    <svg width="70px" height="14px" viewBox="0 0 60 14">
-                     <rect x="10" y="0" width="5" height="14" fill="#FFFFFF">
-                       <animate attributeName="y" values="5;14;5" begin="0s" dur="1s" repeatCount="indefinite" />
-                     </rect> 
-                     <rect x="20" y="0" width="5" height="14" fill="#FFFFFF">
-                       <animate attributeName="y" values="5;14;5" begin="0.1s" dur="1s" repeatCount="indefinite" />
-                     </rect> 
-                     <rect x="30" y="0" width="5" height="14" fill="#FFFFFF">
-                       <animate attributeName="y" values="5;14;5" begin="0.2s" dur="1s" repeatCount="indefinite" />
-                     </rect> 
-                     <rect x="40" y="0" width="5" height="14" fill="#FFFFFF">
-                       <animate attributeName="y" values="5;14;5" begin="0.3s" dur="1s" repeatCount="indefinite" />
-                     </rect> 
+                     <circle r="3" cx="10" cy="0" fill="#FFFFFF">
+                       <animate attributeName="cy" values="5;12;5" begin="0s" dur="1s" repeatCount="indefinite" />
+                     </circle> 
+                     <circle r="3" cx="20" cy="0" fill="#FFFFFF">
+                       <animate attributeName="cy" values="5;12;5" begin="0.1s" dur="1s" repeatCount="indefinite" />
+                     </circle> 
+                     <circle r="3" cx="30" cy="0" fill="#FFFFFF">
+                       <animate attributeName="cy" values="5;12;5" begin="0.2s" dur="1s" repeatCount="indefinite" />
+                     </circle> 
+                     <circle r="3" cx="40" cy="0" fill="#FFFFFF">
+                       <animate attributeName="cy" values="5;12;5" begin="0.3s" dur="1s" repeatCount="indefinite" />
+                     </circle> 
+                     <circle r="3" cx="50" cy="0" fill="#FFFFFF">
+                       <animate attributeName="cy" values="5;12;5" begin="0.4s" dur="1s" repeatCount="indefinite" />
+                     </circle> 
+
                    </svg>
                   </div> 
                   <p class="text-white text-sm mt-1">{{ msg.data }} </p>
