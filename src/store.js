@@ -25,9 +25,9 @@ export default new Vuex.Store({
         var msg = state.msgs[state.msgs.length-1];
         // Minimal length of data, fill with spaces
         if(data.data.length <= 8) {
-            msg.data = data.data.padEnd(20); 
+            msg.data = data.data.padEnd(30); 
         } else if(data.data.length > 8 && data.data.length < 12) {
-            msg.data = data.data.padEnd(16);     
+            msg.data = data.data.padEnd(26);     
         }else {
             msg.data = data.data;    
         }
