@@ -17,10 +17,6 @@
                      <circle r="3" cx="40" cy="0" fill="#FFFFFF">
                        <animate attributeName="cy" values="5;12;5" begin="0.3s" dur="1s" repeatCount="indefinite" />
                      </circle> 
-                     <circle r="3" cx="50" cy="0" fill="#FFFFFF">
-                       <animate attributeName="cy" values="5;12;5" begin="0.4s" dur="1s" repeatCount="indefinite" />
-                     </circle> 
-
                    </svg>
                   </div> 
                   <p class="text-white text-sm mt-1">{{ msg.data }} </p>
